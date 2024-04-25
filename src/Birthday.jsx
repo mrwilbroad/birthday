@@ -1,6 +1,5 @@
 import { useState } from "react";
 import Confetti from "react-dom-confetti";
-import Pic from "./image/mrwilbroad.jpg";
 
 const Birthday = () => {
   const [show, setShow] = useState(false);
@@ -25,7 +24,7 @@ const Birthday = () => {
       className="container-fluid d-flex flex-column justify-content-center align-items-center vh-100 "
     >
       <section className="text-center">
-        <h1 className="mb-4 text-success">
+        <h1 className="mb-4  text-success">
           {word}
         </h1>
         <button
