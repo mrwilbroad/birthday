@@ -39,12 +39,12 @@ const Birthday = () => {
         <Confetti active={show} config={config} />
       </section>
       <section className="mt-5">
-        <p className="text-light">
+        <p className="text-light text-center">
           <i>Click as mush as you can</i>
         </p>
-        <p>
+        <p className="text-center">
           <a href="https://confess.ngl.link/mrwilbroad" target="_blank" 
-          className="border-bottom  border-4 text-decoration-none"
+          className="border-bottom fs-5 border-4 text-decoration-none"
           rel="noopener noreferrer">
             Share with me you thought
           </a>
