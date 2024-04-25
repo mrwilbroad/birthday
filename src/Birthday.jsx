@@ -18,15 +18,10 @@ const Birthday = () => {
     colors: ["#f00", "#0f0", "#00f"],
   };
 
-
   return (
-    <div
-      className="container-fluid d-flex flex-column justify-content-center align-items-center vh-100 "
-    >
+    <div className="container-fluid d-flex flex-column justify-content-center align-items-center vh-100 ">
       <section className="text-center">
-        <h1 className="mb-4  text-success">
-          {word}
-        </h1>
+        <h1 className="mb-4  text-success">{word}</h1>
         <button
           className="btn btn-outline-primary btn-lg text-center border border-light"
           onClick={() => {
@@ -38,7 +33,7 @@ const Birthday = () => {
             }
           }}
         >
-          Click for birthday wishes 
+          Click for birthday wishes
         </button>
 
         <Confetti active={show} config={config} />
@@ -46,6 +41,13 @@ const Birthday = () => {
       <section className="mt-5">
         <p className="text-light">
           <i>Click as mush as you can</i>
+        </p>
+        <p>
+          <a href="https://confess.ngl.link/mrwilbroad" target="_blank" 
+          className="border-bottom  border-4 text-decoration-none"
+          rel="noopener noreferrer">
+            Share with me you thought
+          </a>
         </p>
       </section>
     </div>
