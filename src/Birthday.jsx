@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Confetti from "react-dom-confetti";
 
 const Birthday = () => {
@@ -18,16 +18,32 @@ const Birthday = () => {
     colors: ["#f00", "#0f0", "#00f"],
   };
 
+  const btnRef = useRef();
+  useEffect(() => {
+    if (btnRef.current) {
+      btnRef.current.click();
+    }
+  }, []);
+
+  useEffect(() => {
+    setTimeout(() => {
+      if (btnRef.current) {
+        btnRef.current.click();
+      }
+    }, 2000);
+  });
+
   return (
     <div className="container-fluid d-flex flex-column justify-content-center align-items-center vh-100 ">
       <section className="text-center">
         <h1 className="mb-4  text-success">{word}</h1>
         <button
-          className="btn btn-outline-primary btn-lg text-center border border-light"
+          ref={btnRef}
+          className="btn d-none btn-outline-primary btn-lg text-center border border-light"
           onClick={() => {
             setShow(!show);
             if (word) {
-              setWord("Thanks alot, God bless you for this wishes");
+              setWord("Happy Birthday mrwilbroad");
             } else {
               setWord("Happy Birthday!");
             }
@@ -38,14 +54,14 @@ const Birthday = () => {
 
         <Confetti active={show} config={config} />
       </section>
-      <section className="mt-5">
-        <p className="text-light text-center">
-          <i>Click as mush as you can</i>
-        </p>
+      <section className="mt-5 d-none">
         <p className="text-center">
-          <a href="https://confess.ngl.link/mrwilbroad" target="_blank" 
-          className="border-bottom fs-5 border-4 text-decoration-none"
-          rel="noopener noreferrer">
+          <a
+            href="https://confess.ngl.link/mrwilbroad"
+            target="_blank"
+            className="border-bottom fs-5 border-4 text-decoration-none"
+            rel="noopener noreferrer"
+          >
             Share with me you thought
           </a>
         </p>
